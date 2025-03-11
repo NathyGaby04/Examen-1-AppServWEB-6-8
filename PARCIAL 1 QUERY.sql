@@ -18,7 +18,7 @@ CREATE TABLE [Cliente] (
 	[Cedula] INT NOT NULL,
 	[Nombre] NVARCHAR(255) NOT NULL,
 	[Apellido] NVARCHAR(255) NOT NULL,
-	[Fecha_Nacimiento] DATETIME NOT NULL, -- REVISAR FORMATO DE FECHA
+	[Fecha_Nacimiento] DATETIME NOT NULL,
 	[Direccion] NVARCHAR(50) NOT NULL,
 	[Celular] NVARCHAR(20) NOT NULL,
 	[Correo] NVARCHAR(70) NOT NULL,
@@ -40,7 +40,6 @@ CREATE TABLE [Vehiculo] (
 	[Tipo_Combustible] NVARCHAR(50) NOT NULL,
 	[Marca] INT NOT NULL,
 	[Accesorios] NVARCHAR(500) NOT NULL,
-	[Estado] NVARCHAR(50) NOT NULL, -- PREGUNTAR AL PROFESOR
 	CONSTRAINT [Pk_Vehiculo] PRIMARY KEY CLUSTERED ([Id]),
 	CONSTRAINT [FK_Vehiculo_Marca] FOREIGN KEY ([Marca]) REFERENCES [Marca] ([Id]),
 );
