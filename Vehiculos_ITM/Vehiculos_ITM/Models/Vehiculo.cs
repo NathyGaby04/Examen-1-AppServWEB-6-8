@@ -9,7 +9,6 @@
 
 namespace Vehiculos_ITM.Models
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -28,11 +27,9 @@ namespace Vehiculos_ITM.Models
         public int Marca { get; set; }
         public string Accesorios { get; set; }
         public string Nombre { get; set; }
-
-        [JsonIgnore]
+    
         public virtual Marca Marca1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        [JsonIgnore]
         public virtual ICollection<Venta> Ventas { get; set; }
     }
 }

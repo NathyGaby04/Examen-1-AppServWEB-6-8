@@ -54,6 +54,17 @@ namespace Vehiculos_ITM.Clases
         {
             return dBVehiculosItm.Vehiculoes.FirstOrDefault(e => e.Id == id);
         }
+        public Vehiculo Consultar(string Nombre)
+        {
+            return dBVehiculosItm.Vehiculoes.FirstOrDefault(e => e.Nombre == Nombre);
+        }
+        public List<Vehiculo> ConsultarMarca(int marca)
+        {
+            return dBVehiculosItm.Vehiculoes
+                .Where(e => e.Marca == marca)
+                .OrderBy(e => e.Id)
+                .ToList();
+        }
         public string Eliminar(int id)
         {
             try

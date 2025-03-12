@@ -4,9 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="ea26d705b33c4ae4bfc40c5b7148533d" Name="Diagram1">
-        <EntityTypeShape EntityType="DB_vehiculos_itmModel.Agencia" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_vehiculos_itmModel.Cliente" Width="1.5" PointX="3" PointY="7.375" IsExpanded="true" />
+      <Diagram DiagramId="ea26d705b33c4ae4bfc40c5b7148533d" Name="Diagram1" ZoomLevel="109">
+        <EntityTypeShape EntityType="DB_vehiculos_itmModel.Agencia" Width="1.5" PointX="7.625" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_vehiculos_itmModel.Cliente" Width="1.5" PointX="7.625" PointY="2.875" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_vehiculos_itmModel.Marca" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_vehiculos_itmModel.Vehiculo" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_vehiculos_itmModel.Venta" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />

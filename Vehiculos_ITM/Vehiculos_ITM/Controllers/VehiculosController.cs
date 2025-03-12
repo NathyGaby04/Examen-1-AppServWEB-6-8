@@ -26,6 +26,20 @@ namespace Vehiculos_ITM.Controllers
             ClVehiculo Vehiculo = new ClVehiculo();
             return Vehiculo.Consultar(id);
         }
+        [HttpGet]
+        [Route("ConsultarXMarca")]
+        public List<Vehiculo> ConsultarXMarca(int Marca)
+        {
+            ClVehiculo Vehiculo = new ClVehiculo();
+            return Vehiculo.ConsultarMarca(Marca);
+        }
+        [HttpGet]
+        [Route("ConsultarXNombre")]
+        public Vehiculo ConsultarXNombre(string Nombre)
+        {
+            ClVehiculo Vehiculo = new ClVehiculo();
+            return Vehiculo.Consultar(Nombre);
+        }
         [HttpPost]
         [Route("Insertar")]
         public string Insertar([FromBody] Vehiculo vhl)
