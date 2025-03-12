@@ -33,6 +33,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="Motor" Type="nvarchar" MaxLength="150" Nullable="false" />
     <Property Name="Num_Puertas" Type="int" Nullable="false" />
     <Property Name="Tipo_Combustible" Type="nvarchar" MaxLength="50" Nullable="false" />

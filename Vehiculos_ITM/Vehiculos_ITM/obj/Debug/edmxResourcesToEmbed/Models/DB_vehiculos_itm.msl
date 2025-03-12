@@ -35,6 +35,7 @@
     <EntitySetMapping Name="Vehiculoes">
       <EntityTypeMapping TypeName="DB_vehiculos_itmModel.Vehiculo">
         <MappingFragment StoreEntitySet="Vehiculo">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Motor" ColumnName="Motor" />
           <ScalarProperty Name="Num_Puertas" ColumnName="Num_Puertas" />

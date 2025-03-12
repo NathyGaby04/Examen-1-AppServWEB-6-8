@@ -43,6 +43,7 @@
     <Property Name="Accesorios" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Marca1" Relationship="Self.FK_Vehiculo_Marca" FromRole="Vehiculo" ToRole="Marca" />
     <NavigationProperty Name="Ventas" Relationship="Self.FK_Venta_Vehiculo" FromRole="Vehiculo" ToRole="Venta" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="Venta">
     <Key>

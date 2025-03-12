@@ -35,6 +35,7 @@ GO
 
 CREATE TABLE [Vehiculo] (
 	[Id] INT IDENTITY(1,1) NOT NULL,
+	[Nombre] NVARCHAR(100) NOT NULL,
 	[Motor] NVARCHAR(150) NOT NULL,
 	[Num_Puertas] INT NOT NULL,
 	[Tipo_Combustible] NVARCHAR(50) NOT NULL,
@@ -60,4 +61,6 @@ CREATE TABLE [Venta] (
 );
 GO
 
-
+INSERT INTO [Marca] ([Nombre])
+VALUES ('Porsche'),('Toyota'),('Mercedes'),('Chevrolet');
+GO

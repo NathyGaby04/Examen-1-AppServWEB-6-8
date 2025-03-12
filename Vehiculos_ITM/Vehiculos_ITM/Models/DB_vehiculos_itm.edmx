@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DB_vehiculos_itmModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DB_vehiculos_itmModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Agencia">
           <Key>
             <PropertyRef Name="Id" />
@@ -38,6 +38,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Motor" Type="nvarchar" MaxLength="150" Nullable="false" />
           <Property Name="Num_Puertas" Type="int" Nullable="false" />
           <Property Name="Tipo_Combustible" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -126,8 +127,7 @@
             <End Role="Venta" EntitySet="Venta" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DB_vehiculos_itmModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -174,6 +174,7 @@
           <Property Name="Accesorios" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Marca1" Relationship="Self.FK_Vehiculo_Marca" FromRole="Vehiculo" ToRole="Marca" />
           <NavigationProperty Name="Ventas" Relationship="Self.FK_Venta_Vehiculo" FromRole="Vehiculo" ToRole="Venta" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Venta">
           <Key>
@@ -300,6 +301,7 @@
           <EntitySetMapping Name="Vehiculoes">
             <EntityTypeMapping TypeName="DB_vehiculos_itmModel.Vehiculo">
               <MappingFragment StoreEntitySet="Vehiculo">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Motor" ColumnName="Motor" />
                 <ScalarProperty Name="Num_Puertas" ColumnName="Num_Puertas" />
