@@ -30,11 +30,9 @@ namespace Vehiculos_ITM.Controllers
         [Route("Insertar")]
         public string Insertar([FromBody] Vehiculo vhl)
         {
-            //Se crea una instancia de la clase ClVehiculo
+            
             ClVehiculo Vehiculo = new ClVehiculo();
-            //Se pasa la propieadad Vehiculo al objeto de la clases ClVehiculo
-            Vehiculo.vehiculo = vhl;
-            //Se invoca el método insertar
+            Vehiculo.vehiculo = vhl;   
             return Vehiculo.Insertar();
         }
         [HttpPut]
