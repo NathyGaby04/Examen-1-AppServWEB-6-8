@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_vehiculos_itmModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Agencia">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Direccion" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cedula" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Apellido" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Fecha_Nacimiento" Type="datetime" Nullable="false" />
+    <Property Name="Direccion" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Celular" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Correo" Type="nvarchar" MaxLength="70" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Marca">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Vehiculo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Motor" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Num_Puertas" Type="int" Nullable="false" />
+    <Property Name="Tipo_Combustible" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Marca" Type="int" Nullable="false" />
+    <Property Name="Accesorios" Type="nvarchar" MaxLength="500" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Venta">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Fecha_venta" Type="datetime" Nullable="false" />
+    <Property Name="Agencia" Type="int" Nullable="false" />
+    <Property Name="Cliente" Type="int" Nullable="false" />
+    <Property Name="Vehiculo" Type="int" Nullable="false" />
+    <Property Name="Valor" Type="decimal" Precision="30" Scale="2" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Vehiculo_Marca">
+    <End Role="Marca" Type="Self.Marca" Multiplicity="1" />
+    <End Role="Vehiculo" Type="Self.Vehiculo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Marca">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Vehiculo">
+        <PropertyRef Name="Marca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Venta_Agencia">
+    <End Role="Agencia" Type="Self.Agencia" Multiplicity="1" />
+    <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Agencia">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Venta">
+        <PropertyRef Name="Agencia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Venta_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+    <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Venta">
+        <PropertyRef Name="Cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Venta_Vehiculo">
+    <End Role="Vehiculo" Type="Self.Vehiculo" Multiplicity="1" />
+    <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehiculo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Venta">
+        <PropertyRef Name="Vehiculo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DB_vehiculos_itmModelStoreContainer">
+    <EntitySet Name="Agencia" EntityType="Self.Agencia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Marca" EntityType="Self.Marca" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vehiculo" EntityType="Self.Vehiculo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Venta" EntityType="Self.Venta" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Vehiculo_Marca" Association="Self.FK_Vehiculo_Marca">
+      <End Role="Marca" EntitySet="Marca" />
+      <End Role="Vehiculo" EntitySet="Vehiculo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Venta_Agencia" Association="Self.FK_Venta_Agencia">
+      <End Role="Agencia" EntitySet="Agencia" />
+      <End Role="Venta" EntitySet="Venta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Venta_Cliente" Association="Self.FK_Venta_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Venta" EntitySet="Venta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Venta_Vehiculo" Association="Self.FK_Venta_Vehiculo">
+      <End Role="Vehiculo" EntitySet="Vehiculo" />
+      <End Role="Venta" EntitySet="Venta" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

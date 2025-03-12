@@ -1,14 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\USUARIO\\Desktop\\examen 1 AppServiWEB 6 8\\Examen-1-AppServWEB-6-8\\Vehiculos_ITM\\",
+  "WorkspaceRootPath": "C:\\Users\\campe\\Downloads\\PARCIAL SERVICIOS #1\\Examen-1-AppServWEB-6-8\\Vehiculos_ITM\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3E0E2711-0969-40A3-94D8-E00F59A9671D}|Vehiculos_ITM\\Vehiculos_ITM.csproj|c:\\users\\usuario\\desktop\\examen 1 appserviweb 6 8\\examen-1-appservweb-6-8\\vehiculos_itm\\vehiculos_itm\\clases\\clvehiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E0E2711-0969-40A3-94D8-E00F59A9671D}|Vehiculos_ITM\\Vehiculos_ITM.csproj|solutionrelative:vehiculos_itm\\clases\\clvehiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E0E2711-0969-40A3-94D8-E00F59A9671D}|Vehiculos_ITM\\Vehiculos_ITM.csproj|c:\\users\\usuario\\desktop\\examen 1 appserviweb 6 8\\examen-1-appservweb-6-8\\vehiculos_itm\\vehiculos_itm\\models\\db_vehiculos_itm.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
-      "RelativeMoniker": "D:0:0:{3E0E2711-0969-40A3-94D8-E00F59A9671D}|Vehiculos_ITM\\Vehiculos_ITM.csproj|solutionrelative:vehiculos_itm\\models\\db_vehiculos_itm.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+      "AbsoluteMoniker": "D:0:0:{3E0E2711-0969-40A3-94D8-E00F59A9671D}|Vehiculos_ITM\\Vehiculos_ITM.csproj|c:\\users\\campe\\downloads\\parcial servicios #1\\examen-1-appservweb-6-8\\vehiculos_itm\\vehiculos_itm\\controllers\\vehiculoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E0E2711-0969-40A3-94D8-E00F59A9671D}|Vehiculos_ITM\\Vehiculos_ITM.csproj|solutionrelative:vehiculos_itm\\controllers\\vehiculoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +14,16 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
@@ -30,36 +34,20 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ClVehiculo.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\examen 1 AppServiWEB 6 8\\Examen-1-AppServWEB-6-8\\Vehiculos_ITM\\Vehiculos_ITM\\Clases\\ClVehiculo.cs",
-              "RelativeDocumentMoniker": "Vehiculos_ITM\\Clases\\ClVehiculo.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\examen 1 AppServiWEB 6 8\\Examen-1-AppServWEB-6-8\\Vehiculos_ITM\\Vehiculos_ITM\\Clases\\ClVehiculo.cs",
-              "RelativeToolTip": "Vehiculos_ITM\\Clases\\ClVehiculo.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAuwDwAAAAtAAAAAAAAAA==",
+              "Title": "VehiculosController.cs",
+              "DocumentMoniker": "C:\\Users\\campe\\Downloads\\PARCIAL SERVICIOS #1\\Examen-1-AppServWEB-6-8\\Vehiculos_ITM\\Vehiculos_ITM\\Controllers\\VehiculosController.cs",
+              "RelativeDocumentMoniker": "Vehiculos_ITM\\Controllers\\VehiculosController.cs",
+              "ToolTip": "C:\\Users\\campe\\Downloads\\PARCIAL SERVICIOS #1\\Examen-1-AppServWEB-6-8\\Vehiculos_ITM\\Vehiculos_ITM\\Controllers\\VehiculosController.cs",
+              "RelativeToolTip": "Vehiculos_ITM\\Controllers\\VehiculosController.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAwDcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T23:48:34.356Z",
+              "WhenOpened": "2025-03-12T00:37:42.393Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DB_vehiculos_itm.edmx [Diagram1]",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\examen 1 AppServiWEB 6 8\\Examen-1-AppServWEB-6-8\\Vehiculos_ITM\\Vehiculos_ITM\\Models\\DB_vehiculos_itm.edmx",
-              "RelativeDocumentMoniker": "Vehiculos_ITM\\Models\\DB_vehiculos_itm.edmx",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\examen 1 AppServiWEB 6 8\\Examen-1-AppServWEB-6-8\\Vehiculos_ITM\\Vehiculos_ITM\\Models\\DB_vehiculos_itm.edmx [Diagram1]",
-              "RelativeToolTip": "Vehiculos_ITM\\Models\\DB_vehiculos_itm.edmx [Diagram1]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2025-03-11T23:41:49.326Z",
-              "EditorCaption": " [Diagram1]"
             }
           ]
         }
